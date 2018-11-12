@@ -40,17 +40,23 @@ public class HosDataSourceConfig {
 
         //使用lambda如何操作再研究下
         Set<Object> propertiesSet = properties.keySet();
-        Properties dsProperties = propertiesSet.stream()
+        /*Properties dsProperties = propertiesSet.stream()
                 .filter(item -> item.toString().startsWith("datasource"))
                 .map(item -> {
                     Properties properties1 = new Properties();
                   return  properties1.put(item.toString().replace("datasource.",""),properties.get(item));
-                });
+                });*/
+        Properties dsproperties = new Properties();
+        for (Object key : propertiesSet) {
+            if (key.toString().startsWith("datasource")) {
+                dsproperties.put(key.toString().replace("datasource.", ""), properties.get(key));
+            }
+        }
 
         //2.通过HikariDataSourceFactory 生产一个datasource
 
         HikariDataSourceFactory hikariDataSourceFactory = new HikariDataSourceFactory();
-        hikariDataSourceFactory.setProperties(dsProperties);
+        hikariDataSourceFactory.setProperties(dsproperties);
         inputStream.close();
         return hikariDataSourceFactory.getDataSource();
     }

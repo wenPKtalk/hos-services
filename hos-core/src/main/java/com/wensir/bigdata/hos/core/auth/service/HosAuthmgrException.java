@@ -1,0 +1,33 @@
+package com.wensir.bigdata.hos.core.auth.service;
+
+import com.wensir.bigdata.hos.core.HosBaseException;
+
+public class HosAuthmgrException extends HosBaseException {
+    private int code;
+    private String message;
+
+    public HosAuthmgrException(int code, String message, Throwable cause) {
+        super(message, cause);
+        this.code = code;
+        this.message = message;
+    }
+
+    public HosAuthmgrException(int code, String message) {
+        super(message, null);
+        this.code = code;
+        this.message = message;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
+    public int errorCode() {
+        return this.code;
+    }
+}
