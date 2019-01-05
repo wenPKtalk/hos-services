@@ -64,15 +64,13 @@ public class HosDataSourceConfig {
     @Bean("HosSqlSessionFactory")
     @Primary
     public SqlSessionFactory hosSqlSessionFactory(@Qualifier("HosDataSource") DataSource dataSource) throws Exception {
-        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-        sqlSessionFactoryBean.setDataSource(dataSource);
-        //读取Mybatis相关配置
+        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+        factoryBean.setDataSource(dataSource);
         ResourceLoader loader = new DefaultResourceLoader();
-        sqlSessionFactoryBean.setConfigLocation(loader.getResource("classpath:application.properties"));
-
-        //获取SQLsessionfactory实例
-        sqlSessionFactoryBean.setSqlSessionFactoryBuilder(new SqlSessionFactoryBuilder());
-        return sqlSessionFactoryBean.getObject();
+        String resource = "classpath:mybatis-config.xml";
+        factoryBean.setConfigLocation(loader.getResource(resource));
+        factoryBean.setSqlSessionFactoryBuilder(new SqlSessionFactoryBuilder());
+        return factoryBean.getObject();
     }
 
 }

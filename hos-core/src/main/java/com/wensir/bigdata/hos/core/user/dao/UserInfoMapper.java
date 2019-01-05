@@ -1,6 +1,5 @@
 package com.wensir.bigdata.hos.core.user.dao;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import com.wensir.bigdata.hos.core.user.model.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -8,6 +7,7 @@ import org.apache.ibatis.annotations.ResultMap;
 
 @Mapper
 public interface UserInfoMapper {
+
     void addUser(@Param("userInfo") UserInfo userInfo);
 
     int deleteUser(@Param("userId") String userId);

@@ -5,7 +5,7 @@ import com.wensir.bigdata.hos.core.auth.dao.TokenInfoMapper;
 import com.wensir.bigdata.hos.core.auth.model.ServiceAuth;
 import com.wensir.bigdata.hos.core.auth.model.TokenInfo;
 import com.wensir.bigdata.hos.core.auth.service.IAuthService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +20,7 @@ public class AuthService implements IAuthService {
 
         @Autowired
         TokenInfoMapper tokenInfoMapper;
+
         @Autowired
         ServiceAuthMapper serviceAuthMapper;
 
