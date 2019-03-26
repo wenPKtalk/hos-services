@@ -16,6 +16,11 @@
             <artifactId>hos-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.wensir</groupId>
+            <artifactId>hos-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

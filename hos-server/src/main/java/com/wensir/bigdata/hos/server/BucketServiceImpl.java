@@ -6,6 +6,7 @@ import com.wensir.bigdata.hos.core.auth.service.impl.AuthService;
 import com.wensir.bigdata.hos.core.user.model.UserInfo;
 import com.wensir.bigdata.hos.server.dao.BucketModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +30,7 @@ public class BucketServiceImpl implements IBucketService {
     BucketModelMapper bucketModelMapper;
 
     @Autowired
+    @Qualifier("authServiceImpl")
     IAuthService authService;
 
     @Override
