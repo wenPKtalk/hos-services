@@ -1,5 +1,6 @@
 package com.wensir.bigdata.hos.server;
 
+import com.wensir.bigdata.hos.common.BucketModel;
 import com.wensir.bigdata.hos.core.user.model.UserInfo;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.wensir.bigdata.hos.server;
+package com.wensir.bigdata.hos.common;
 
 import com.wensir.bigdata.hos.core.HosCoreUtil;
 import lombok.Data;

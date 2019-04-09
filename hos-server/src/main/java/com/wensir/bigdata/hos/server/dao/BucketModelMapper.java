@@ -1,6 +1,6 @@
 package com.wensir.bigdata.hos.server.dao;
 
-import com.wensir.bigdata.hos.server.BucketModel;
+import com.wensir.bigdata.hos.common.BucketModel;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;

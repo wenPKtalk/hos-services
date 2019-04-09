@@ -6,7 +6,7 @@ import com.wensir.bigdata.hos.core.auth.service.IAuthService;
 import com.wensir.bigdata.hos.core.user.model.SystemRole;
 import com.wensir.bigdata.hos.core.user.model.UserInfo;
 import com.wensir.bigdata.hos.core.user.service.IUserInfoService;
-import com.wensir.bigdata.hos.server.BucketModel;
+import com.wensir.bigdata.hos.common.BucketModel;
 import com.wensir.bigdata.hos.server.dao.BucketModelMapper;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

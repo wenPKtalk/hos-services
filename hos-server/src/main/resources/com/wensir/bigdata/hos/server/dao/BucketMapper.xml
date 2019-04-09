@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wensir.bigdata.hos.server.dao.BucketModelMapper">
-  <resultMap id="BucketResultMap" type="com.wensir.bigdata.hos.server.BucketModel">
+  <resultMap id="BucketResultMap" type="com.wensir.bigdata.hos.common.BucketModel">
     <id column="BUCKET_ID" property="bucketId"/>
     <result column="BUCKET_NAME" property="bucketName"/>
     <result column="DETAIL" property="detail"/>
